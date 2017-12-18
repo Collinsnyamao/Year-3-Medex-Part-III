@@ -1,6 +1,7 @@
 package ke.co.comsterhomes.www.firebase24;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -39,6 +40,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     private Button submitbtn;
     private EditText emailText, passwordText;
     private FirebaseAuth firebaseAuth;
+    FirebaseAuth.AuthStateListener mAuthStateListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +66,25 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 .build();
 
         firebaseAuth = FirebaseAuth.getInstance();
+
+
+        mAuthStateListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if (firebaseAuth.getCurrentUser()!=null){
+                    Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
+                    startActivity(intent);
+                    Toast.makeText(getApplicationContext(),"Logged in as :"+ firebaseAuth.getCurrentUser(),Toast.LENGTH_SHORT).show();
+                }
+            }
+        };
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        firebaseAuth.addAuthStateListener(mAuthStateListener);
     }
 
     @Override
@@ -85,8 +106,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     }
 
     private void logIn() {
-        String email = emailText.getText().toString();
-        final String password = passwordText.getText().toString();
+        String email = emailText.getText().toString().trim();
+        final String password = passwordText.getText().toString().trim();
 
         if (TextUtils.isEmpty(email)){
             Toast.makeText(getApplicationContext(),"Email field empty",Toast.LENGTH_SHORT);
@@ -97,8 +118,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             return;
         }
 
-        progressDialog.setTitle("Registering user.");
-        progressDialog.setMessage("Please wait while we Register you!");
+        progressDialog.setTitle("Loging In user.");
+        progressDialog.setMessage("Please wait while we Log you in!");
         progressDialog.setProgress(100);
         progressDialog.show();
 
@@ -114,8 +135,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                     }
 
                 }else {
-                    Intent intent = new Intent(LoginActivity.this,MainActivity.class);
-                    startActivity(intent);
+
                     finish();
                 }
             }
