@@ -1,5 +1,5 @@
 # Year-3-MedEx-Part-II
-<h1 color=fefefe>Year 3 Mobile application programming project</h1>
+Year 3 Mobile application programming project
 
 <h2>Group Members:</h1>
 
