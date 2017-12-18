@@ -69,7 +69,7 @@ public class SignUp extends AppCompatActivity implements GoogleApiClient.OnConne
         passwordText = (EditText) findViewById(R.id.signuppassword);
 
         firebaseAuth = FirebaseAuth.getInstance();
-        homeIntent = new Intent(SignUp.this,MainActivity.class);
+        homeIntent = new Intent(SignUp.this,LoginActivity.class);
 
     }
 
@@ -119,6 +119,8 @@ public class SignUp extends AppCompatActivity implements GoogleApiClient.OnConne
     private void signIn() {
         Intent signinIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signinIntent, RC_SIGN_IN);
+        Intent transfer = new Intent(SignUp.this,LoginActivity.class);
+        startActivity(transfer);
     }
 
     @Override

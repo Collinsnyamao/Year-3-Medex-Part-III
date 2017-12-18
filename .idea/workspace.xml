@@ -10,8 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af4132be-f1bb-4c1f-8de2-f73dab1161e8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/HomeActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" />
@@ -21,9 +19,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/LoginActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/SignUp.java" afterPath="$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/SignUp.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -106,16 +102,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomeActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/HomeActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="49" lean-forward="false" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+            <state relative-caret-position="489">
+              <caret line="36" column="50" lean-forward="false" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#743#1030#0" expanded="true" />
                 <element signature="e#1029#1030#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SignUp.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/SignUp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="71" column="57" lean-forward="false" selection-start-line="71" selection-start-column="57" selection-end-line="71" selection-end-column="57" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -141,19 +147,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content_firebase_db.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_firebase_db.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1969,12 +1962,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/PillAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/MainTabActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/Tab1.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/SignUp.java" />
         <option value="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/HomeActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/SignUp.java" />
       </list>
     </option>
   </component>
@@ -2342,7 +2335,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513635211143" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513637138025" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2390,7 +2383,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513635211143" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513637138025" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2565,7 +2558,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513635211144" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513637138028" />
       </method>
     </configuration>
     <list size="1">
@@ -2840,7 +2833,6 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/Tab1.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tab1.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/SignUp.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_firebase_db.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -2954,13 +2946,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/HomeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="49" lean-forward="false" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+        <state relative-caret-position="489">
+          <caret line="36" column="50" lean-forward="false" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#743#1030#0" expanded="true" />
             <element signature="e#1029#1030#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ke/co/comsterhomes/www/firebase24/SignUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="71" column="57" lean-forward="false" selection-start-line="71" selection-start-column="57" selection-end-line="71" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
