@@ -70,8 +70,16 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.lpLoginBtn:
-                logIn();
                 text2.setText("HELLO");
+                if (TextUtils.isEmpty(emailText.getText().toString().trim())){
+                    Toast.makeText(getApplicationContext(),"Email Field is empty",Toast.LENGTH_SHORT).show();
+                }
+                if (TextUtils.isEmpty(passwordText.getText().toString().trim())){
+                    Toast.makeText(getApplicationContext(),"Password Field is empty",Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    logIn();
+                }
                 break;
         }
     }

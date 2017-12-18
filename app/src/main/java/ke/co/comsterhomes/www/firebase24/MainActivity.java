@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(signupintent);
             }
         });
+
         mlistView = (ListView) findViewById(R.id.mlistview);
 
         getSupportActionBar().hide();
