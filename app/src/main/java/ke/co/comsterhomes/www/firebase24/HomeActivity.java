@@ -7,12 +7,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class HomeActivity extends AppCompatActivity {
 
     TextView textView;
     FirebaseAuth firebaseAuth;
     Button logout;
+    FirebaseUser firebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +37,17 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         String uname = firebaseAuth.getCurrentUser().toString();
-        textView.setText(uname);
+
+
+        firebaseUser = firebaseAuth.getCurrentUser();
+
+        String userEmail = firebaseUser.getEmail();
+
+        String userEmail2 = userEmail;
+
+        int index = userEmail2.indexOf('@');
+        userEmail2 = userEmail2.substring(0,index);
+        textView.setText(userEmail2);
 
     }
 }

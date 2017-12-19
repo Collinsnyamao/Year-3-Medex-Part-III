@@ -28,6 +28,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
@@ -41,12 +42,12 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     private EditText emailText, passwordText;
     private FirebaseAuth firebaseAuth;
     FirebaseAuth.AuthStateListener mAuthStateListener;
+    FirebaseUser firebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         text2 = findViewById(R.id.statustxt2);
         emailText = (EditText) findViewById(R.id.lploginemail);
         passwordText = (EditText) findViewById(R.id.lploginpassword);
@@ -66,15 +67,21 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 .build();
 
         firebaseAuth = FirebaseAuth.getInstance();
+        firebaseUser = firebaseAuth.getCurrentUser();
+        final String userEmail = firebaseUser.getEmail();
 
 
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if (firebaseAuth.getCurrentUser()!=null){
+
+                    String UserEmail2 = userEmail;
+                    int index = UserEmail2.indexOf('@');
+                    UserEmail2 = UserEmail2.substring(0,index);
                     Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
                     startActivity(intent);
-                    Toast.makeText(getApplicationContext(),"Logged in as :"+ firebaseAuth.getCurrentUser(),Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Logged in as: "+ UserEmail2,Toast.LENGTH_SHORT).show();
                 }
             }
         };

@@ -42,6 +42,7 @@ public class SignUp extends AppCompatActivity implements GoogleApiClient.OnConne
     private EditText emailText,passwordText;
     Intent signupintent;
     Intent homeIntent;
+    FirebaseUser firebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +71,9 @@ public class SignUp extends AppCompatActivity implements GoogleApiClient.OnConne
 
         firebaseAuth = FirebaseAuth.getInstance();
         homeIntent = new Intent(SignUp.this,LoginActivity.class);
+        firebaseUser = firebaseAuth.getCurrentUser();
+
+        String userEmail = firebaseUser.getEmail().toString().trim();
 
     }
 
