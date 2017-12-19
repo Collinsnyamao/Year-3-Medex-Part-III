@@ -1,8 +1,11 @@
 package ke.co.comsterhomes.www.firebase24;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -15,6 +18,7 @@ public class HomeActivity extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     Button logout;
     FirebaseUser firebaseUser;
+    WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +27,18 @@ public class HomeActivity extends AppCompatActivity {
 
 
         textView = (TextView) findViewById(R.id.dbtest1);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent main = new Intent(HomeActivity.this,WebMD.class);
+                startActivity(main);
+            }
+        });
         firebaseAuth = FirebaseAuth.getInstance();
+        webView = (WebView) findViewById(R.id.webv1);
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        webView.loadUrl("https://www.webmd.com/drugs/2/index");
 
         logout = (Button) findViewById(R.id.lgt);
         logout.setOnClickListener(new View.OnClickListener() {

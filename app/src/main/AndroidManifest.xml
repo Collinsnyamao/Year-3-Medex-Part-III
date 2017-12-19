@@ -31,7 +31,8 @@
             android:name=".FirebaseDB"
             android:label="@string/title_activity_firebase_db"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".WebMD"></activity>
     </application>
 
 </manifest>

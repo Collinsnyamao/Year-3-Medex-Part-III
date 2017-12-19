@@ -48,6 +48,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         text2 = findViewById(R.id.statustxt2);
         emailText = (EditText) findViewById(R.id.lploginemail);
         passwordText = (EditText) findViewById(R.id.lploginpassword);
@@ -68,20 +69,15 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
-        final String userEmail = firebaseUser.getEmail();
 
 
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if (firebaseAuth.getCurrentUser()!=null){
-
-                    String UserEmail2 = userEmail;
-                    int index = UserEmail2.indexOf('@');
-                    UserEmail2 = UserEmail2.substring(0,index);
                     Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
                     startActivity(intent);
-                    Toast.makeText(getApplicationContext(),"Logged in as: "+ UserEmail2,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Logged in as :"+ firebaseAuth.getCurrentUser().getEmail(),Toast.LENGTH_SHORT).show();
                 }
             }
         };
