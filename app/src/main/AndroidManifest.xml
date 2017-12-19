@@ -32,9 +32,7 @@
             android:label="@string/title_activity_firebase_db"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".WebMD" />
-        <activity android:name=".PrescriptionInput" />
-        <activity android:name=".showdata"></activity>
+        <activity android:name=".WebMD"></activity>
     </application>
 
 </manifest>
